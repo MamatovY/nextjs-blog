@@ -8,7 +8,6 @@ const name = 'Mamatov Yimanbek';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
-    console.log(home);
     return (
         <div className={styles.container}>
             <Head>
@@ -31,7 +30,7 @@ export default function Layout({ children, home }) {
                     <>
                         <Image
                             priority
-                            src="images/myPhoto.jpg"
+                            src="/images/myPhoto.jpg"
                             className={utilStyles.borderCircle}
                             height={144}
                             width={144}
@@ -44,7 +43,7 @@ export default function Layout({ children, home }) {
                         <Link href="/">
                             <Image
                                 priority
-                                src="images/myPhoto.jpg"
+                                src="/images/myPhoto.jpg"
                                 className={utilStyles.borderCircle}
                                 height={108}
                                 width={108}
