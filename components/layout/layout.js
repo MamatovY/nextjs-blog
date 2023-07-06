@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './layout.module.css';
 import utilStyles from '../../styles/utils.module.css';
 
-const name = 'Mamatov Yimanbek';
+const name = 'Mamatov Yimanbek Smamtov Samat Almazbekch KumaRiza';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
