@@ -5,7 +5,7 @@ import styles from './layout.module.css';
 import utilStyles from '../../styles/utils.module.css';
 
 const name = 'Mamatov Yimanbek Smamtov Samat Almazbekch KumaRiza';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Mamatov Yimanbek, Smamtov Samat Almazbekch KumaRiza';
 
 export default function Layout({ children, home }) {
     return (
@@ -14,7 +14,11 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="Mamatov Yimanbek Smamtov Samat Almazbekch KumaRiza"
+                />
+                <meta
+                    name="keywords"
+                    content="Mamatov Yimanbek, Smamtov Samat Almazbekch KumaRiza"
                 />
                 <meta
                     property="og:image"
