@@ -1,36 +1,27 @@
-import Link from "next/link"
+'use client'
 import Head from 'next/head'
 import Layout from "../../components/layout";
-import Script from 'next/script'
-import useSWR from 'swr';
+import InputUser from '../../components/inputUser';
 
-const fetchData = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-
-    return data;
-};
-
-const Profile = () => {
-    const { data, error } = useSWR('https://jsonplaceholder.typicode.com/users/2', fetchData);
-
-    if (error) return <div>failed to load</div>;
-    if (!data) return <div>loading...</div>;
-    return <div>hello {data.name}!</div>;
+export const getServerSideProps = async () => {
+    const res = await fetch('http://localhost:3001/users/3')
+    const data = await res.json()
+    return { props: { data } }
 }
 
-const FirstPost = () => {
-
+const FirstPost = ({ data }) => {
+    console.log(data);
     return (
         <Layout>
             <Head>
                 <title>First Post</title>
             </Head>
             <h1>First Post</h1>
-            <h2>
-                <Link href="/">Back to home</Link>
-            </h2>
-            <Profile />
+
+            <div>
+                {data.name}
+            </div>
+            <InputUser id={3} name={data.name} />
         </Layout>
     )
 }
